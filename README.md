@@ -1,11 +1,11 @@
 # Listo Legal Documents
 
-This repository contains the legal documents for the Listo app, including Privacy Policy and Terms of Service in both Korean and English.
+This directory contains the legal documents for the Listo app, including Privacy Policy and Terms of Service in both Korean and English.
 
 ## Structure
 
 ```
-.
+docs/web/
 ├── index.html              # Language selection page
 ├── ko/                     # Korean documents
 │   ├── privacy_policy.html
@@ -15,27 +15,29 @@ This repository contains the legal documents for the Listo app, including Privac
     └── terms_of_service.html
 ```
 
-## GitHub Pages
+## GitHub Pages Deployment
 
-This repository is automatically deployed to GitHub Pages.
+To deploy these pages using GitHub Pages:
 
-- **Main page**: https://jaloveeye.github.io/listo-web/
-- **Korean Privacy Policy**: https://jaloveeye.github.io/listo-web/ko/privacy_policy.html
-- **Korean Terms of Service**: https://jaloveeye.github.io/listo-web/ko/terms_of_service.html
-- **English Privacy Policy**: https://jaloveeye.github.io/listo-web/en/privacy_policy.html
-- **English Terms of Service**: https://jaloveeye.github.io/listo-web/en/terms_of_service.html
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the left sidebar
+3. Under "Source", select "Deploy from a branch"
+4. Choose "main" or "develop" branch
+5. Select "/docs" as the folder
+6. Click "Save"
 
-## Deployment
+The pages will be available at:
+- `https://[username].github.io/listo/web/` (if deploying from root)
+- Or configure a custom domain if needed
 
-This repository uses GitHub Pages. To deploy:
+## URLs
 
-1. Go to repository Settings → Pages
-2. Select "Deploy from a branch"
-3. Choose `main` branch
-4. Select `/ (root)` folder
-5. Click Save
-
-The site will be automatically deployed to `https://jaloveeye.github.io/listo-web/`
+After deployment, the pages will be accessible at:
+- Main page: `https://[username].github.io/listo/web/`
+- Korean Privacy Policy: `https://[username].github.io/listo/web/ko/privacy_policy.html`
+- Korean Terms of Service: `https://[username].github.io/listo/web/ko/terms_of_service.html`
+- English Privacy Policy: `https://[username].github.io/listo/web/en/privacy_policy.html`
+- English Terms of Service: `https://[username].github.io/listo/web/en/terms_of_service.html`
 
 ## Updating Documents
 
@@ -44,3 +46,4 @@ When updating the legal documents:
 2. Make sure both language versions are synchronized
 3. Commit and push changes to the repository
 4. GitHub Pages will automatically rebuild (may take a few minutes)
+

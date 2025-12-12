@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Listo</title>
+    <script>
+        // 브라우저 언어 감지 및 리다이렉트
+        (function() {
+            const language = navigator.language || navigator.userLanguage;
+            const langCode = language.toLowerCase().split('-')[0];
+            
+            // 한국어면 한글 페이지로, 아니면 영문 페이지로
+            if (langCode === 'ko') {
+                window.location.replace('ko/privacy_policy.html');
+            } else {
+                window.location.replace('en/privacy_policy.html');
+            }
+        })();
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .loading {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Redirecting...</p>
+    </div>
+    <!-- Fallback: JavaScript가 비활성화된 경우 -->
+    <noscript>
+        <div style="text-align: center; padding: 20px;">
+            <h1>Privacy Policy</h1>
+            <p>Please enable JavaScript or select a language:</p>
+            <a href="ko/privacy_policy.html" style="color: white; margin: 10px; text-decoration: underline;">한국어</a>
+            <a href="en/privacy_policy.html" style="color: white; margin: 10px; text-decoration: underline;">English</a>
+        </div>
+    </noscript>
+</body>
+</html>
+
