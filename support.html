@@ -152,8 +152,8 @@
     <div class="container">
         <div class="header">
             <div class="language-switcher">
-                <button class="lang-btn active" onclick="switchLanguage('ko')">한국어</button>
-                <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+                <button class="lang-btn active" onclick="switchLanguage('ko', event)">한국어</button>
+                <button class="lang-btn" onclick="switchLanguage('en', event)">English</button>
             </div>
             <h1>Listo</h1>
             <p class="lang-ko active">지원 및 문의</p>
@@ -201,7 +201,7 @@
 
     <script>
         // 언어 전환 함수
-        function switchLanguage(lang) {
+        function switchLanguage(lang, event) {
             // 모든 언어 요소 숨기기
             document.querySelectorAll('.lang-ko, .lang-en').forEach(el => {
                 el.classList.remove('active');
@@ -216,7 +216,17 @@
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            } else {
+                // 이벤트가 없으면 버튼을 직접 찾아서 활성화
+                const buttons = document.querySelectorAll('.lang-btn');
+                if (lang === 'ko') {
+                    buttons[0].classList.add('active');
+                } else {
+                    buttons[1].classList.add('active');
+                }
+            }
             
             // HTML lang 속성 업데이트
             document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
@@ -231,10 +241,12 @@
             const browserLang = navigator.language || navigator.userLanguage;
             const defaultLang = savedLang || (browserLang.startsWith('ko') ? 'ko' : 'en');
             
+            // 기본 언어가 영어면 영어로 전환
             if (defaultLang === 'en') {
                 switchLanguage('en');
-                document.querySelectorAll('.lang-btn')[1].classList.add('active');
-                document.querySelectorAll('.lang-btn')[0].classList.remove('active');
+            } else {
+                // 한글이 기본이므로 이미 active 클래스가 있음
+                switchLanguage('ko');
             }
         });
     </script>
