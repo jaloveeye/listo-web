@@ -27,17 +27,18 @@ To deploy these pages using GitHub Pages:
 6. Click "Save"
 
 The pages will be available at:
-- `https://[username].github.io/listo/web/` (if deploying from root)
+- `https://[username].github.io/listo-web/` (if deploying from root)
 - Or configure a custom domain if needed
 
 ## URLs
 
 After deployment, the pages will be accessible at:
-- Main page: `https://[username].github.io/listo/web/`
-- Korean Privacy Policy: `https://[username].github.io/listo/web/ko/privacy_policy.html`
-- Korean Terms of Service: `https://[username].github.io/listo/web/ko/terms_of_service.html`
-- English Privacy Policy: `https://[username].github.io/listo/web/en/privacy_policy.html`
-- English Terms of Service: `https://[username].github.io/listo/web/en/terms_of_service.html`
+- Main page: `https://[username].github.io/listo-web/`
+- Support page: `https://[username].github.io/listo-web/support.html`
+- Korean Privacy Policy: `https://[username].github.io/listo-web/ko/privacy_policy.html`
+- Korean Terms of Service: `https://[username].github.io/listo-web/ko/terms_of_service.html`
+- English Privacy Policy: `https://[username].github.io/listo-web/en/privacy_policy.html`
+- English Terms of Service: `https://[username].github.io/listo-web/en/terms_of_service.html`
 
 ## Updating Documents
 
